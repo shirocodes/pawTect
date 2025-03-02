@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pawTect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header>
+    <div class="paw-logo">
+        <img src="./assets/images/paw-logo" alt="A pawTect pawTect logo" width="40px" height="40px">
+    </div>
+    <div class="profile">avatar</div>
+   </header> 
+
+   <nav>
+    <a class="nav-one">leaderboard</a>
+    <a class="nav-two">wallet</a>
+   </nav>
+
+   <main>
+    <section class="paw-info">
+        <h2>pawTect is here</h2>
+        <p>Think you can spot crypto rugs?<br> Show it - learn, earn points, and 
+            level up in an interactive community </p>
+        <button>How it works</button>
+        <div class="img-container">
+            <img src="./assets/images/moon" alt="A futuristic moon with paws" width="70px" height="70px">
+        </div>
+    </section>
+    <section class="earn-points">
+        <card class="quiz-card">
+            <div class="img-container">
+                <img src="./assets/images/quiz-icon" alt="futuristic coin icon" width="50px" height="50px">
+            </div>
+            <div class="points">
+                <h3>quiz points</h3>
+                <output id="QP-points">QP</output>
+                <aside class="list-of-quizzes">
+                    <button>quiz to earn</button>
+                </aside>
+            </div>
+        </card>
+        <card class="learn-card">
+            <div class="img-container">
+                <img src="./assets/images/learn-icon" alt="A futuristic coin icon" width="50px" height="50px">
+            </div>
+            <div class="points">
+                <h3>learn points</h3>
+                <output id="LP-points">LP</output>
+                <aside class="watch-links">
+                    <button>learn to earn</button>
+                </aside>
+            </div>
+        </card>
+    </section>
+   </main>
+   
+   <footer>pawTect copyrights</footer>
+   <script src="src/paw.js"></script>
+</body>
+</html>
