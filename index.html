@@ -11,53 +11,53 @@
     <div class="paw-logo">
         <img src="./assets/images/paw-logo" alt="A pawTect pawTect logo" width="40px" height="40px">
     </div>
-    <div class="profile">avatar</div>
+    <div class="profile">
+        <img src="./assets/images/user-avatar" alt="The user's profile picture" height="40px" width="40px">
+    </div>
    </header> 
 
    <nav>
     <a class="nav-one">leaderboard</a>
-    <a class="nav-two">wallet</a>
+    <a class="nav-two">community</a>
    </nav>
 
    <main>
     <section class="paw-info">
-        <h2>pawTect is here</h2>
-        <p>Think you can spot crypto rugs?<br> Show it - learn, earn points, and 
+        <div class="description">
+            <h2>pawTect is here</h2>
+            <p>Think you can spot crypto rugs?<br> Show it - learn, earn points, and 
             level up in an interactive community </p>
-        <button>How it works</button>
-        <div class="img-container">
-            <img src="./assets/images/moon" alt="A futuristic moon with paws" width="70px" height="70px">
         </div>
+        <button class="info-btn">How it works</button>
+        
     </section>
     <section class="earn-points">
         <card class="quiz-card">
-            <div class="img-container">
-                <img src="./assets/images/quiz-icon" alt="futuristic coin icon" width="50px" height="50px">
+            <div class="QP-coin">
+                <img class="QP-icon" src="./assets/images/quiz-icon" alt="futuristic coin icon" width="50px" height="50px">
+                <div class="points">
+                    <h3>quiz points</h3>
+                    <output id="QP-points"> 0 QP</output>
+                </div>
             </div>
-            <div class="points">
-                <h3>quiz points</h3>
-                <output id="QP-points">QP</output>
-                <aside class="list-of-quizzes">
-                    <button>quiz to earn</button>
-                </aside>
-            </div>
+            <button class="list-of-quizzes">quiz to earn</button>
         </card>
         <card class="learn-card">
-            <div class="img-container">
-                <img src="./assets/images/learn-icon" alt="A futuristic coin icon" width="50px" height="50px">
+            <div class="LP-coin">
+                <img class="LP-icon" src="./assets/images/learn-icon" alt="A futuristic coin icon" width="50px" height="50px">
+                <div class="points">
+                    <h3>learn points</h3>
+                    <output id="LP-points"> 0 LP</output>
+                </div>
             </div>
-            <div class="points">
-                <h3>learn points</h3>
-                <output id="LP-points">LP</output>
-                <aside class="watch-links">
-                    <button>learn to earn</button>
-                </aside>
-            </div>
+            <button class="watch-links">learn to earn</button>
         </card>
     </section>
    </main>
    
-   <footer>pawTect copyrights</footer>
+   <footer>
+    <p>&copy;2025 pawTect. All Rights Reserved</p>
+   </footer>
    <script src="src/paw.js"></script>
 </body>
 </html>

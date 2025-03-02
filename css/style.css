@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 15px;
+}
+
+body {
+    background-color: #121212;
+    height: 100vh;
+    padding: 0.5rem;
+    /* border: 1px solid green; */
+    margin: 0.5rem;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+    grid-template-rows: 1fr 1fr 9fr 1fr;
+    gap: 10px;
+}
+
+/* Header styling */
+header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+.paw-logo {
+    justify-self: start;
+}
+.profile {
+    justify-self: end;
+    padding-right: 20px;
+}
+.profile:hover {
+    transform: scale(0.8);
+    background-color: #c8d1b7;
+}
+
+/* nav section */
+nav {
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background: linear-gradient(45deg, #06042099, #0b0318e6);
+    padding: 1rem;
+}
+.nav-one {
+    justify-self: start;
+}
+.nav-two {
+    justify-self: end;
+    padding-right: 20px;
+}
+.nav-one, .nav-two {
+    cursor: pointer;
+    transition: 
+    background-color 0.2s ease,
+    transform 0.2s ease;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.nav-one:hover, .nav-two:hover {
+    transform: scale(1);
+    background-color: #0f1601;
+    border-radius: 1rem;
+}
+
+/* Main section */
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas: 
+    "paw-info"
+    "earn-points";
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    gap: 10px;
+}
+.paw-info {
+    grid-area: paw-info;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-image: url(/assets/images/paw-background);
+    background-position:bottom;
+    border-radius: 10px;
+}
+.description {
+    max-width: 70%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.6);
+}
+.description h2 {
+    font-size: 30px;
+    line-height: 2;
+    margin: 0 0 10px 0;
+}
+.description p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+    0, 0, 8px rgba(255, 255, 255, 0.5);
+}
+.info-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    transition: 
+    background-color 0.5s ease-in,
+    transform 0.3s ease-out;
+}
+.info-btn:hover, .earn-points button:hover {
+    transform: scale(0.8);
+    background-color: olivedrab;
+}
+
+.earn-points {
+    grid-area: earn-points;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.quiz-card, .learn-card {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.8rem;
+
+}
+.QP-coin, .LP-coin{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 15px;
+}
+.points {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+h3 {
+    font-size: 22px;
+    margin: 0 0 0.3rem 0;
+}
+.points output {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.2rem;
+    color: #0b6623;
+}
+.earn-points button {
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 
+    background-color 0.4s ease-in,
+    transform 0.4s ease-out;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+/* footer area */
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+/* media queries */
+
+
+
+
