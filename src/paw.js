@@ -1,5 +1,7 @@
 
-let presentQuizposition = 0;
+let presentQuizposition = 0; //current QP points
+const allQuestions = 0;  //questions in the array
+let watchPoints = 0; //monitoring the LP points
 document.addEventListener('DOMContentLoaded', function(){
     startTest();
 });
@@ -36,8 +38,28 @@ function startTest() {
     quizBtn.addEventListener('click', () => {
         showQuiz('.quiz-card', quizList);
     });
+
+    //listen for LP coin
+    const watchArea = document.querySelector('.learn-card .watch-links');
+    watchArea.addEventListener('click', () => {
+        //send the user to a tutorial
+        window.open('https://www.youtube.com/watch?v=G75NZPlTxmk', '_blank');
+        //after clicking, user receives points
+        watchPoints +=600;
+
+        const watchResult = document.querySelector('#LP-points');
+        watchResult.textContent = `${watchPoints} LP`;
+    })
+    //dealing with the nav bar click on leaderboard
+    const leaderBoard = document.querySelector('.nav-one');
+    console.log('leader:', leaderBoard)
+    leaderBoard.addEventListener('click', () => {
+        alert('Join a crypto community to become a pawTected member!');
+    });
+
 }
 
+     //Deal with the main section's user activity
 //create element to show the quiz
 function showQuiz (sectionClass, questions) {
     const section = document.querySelector(sectionClass);
@@ -60,7 +82,6 @@ function showQuiz (sectionClass, questions) {
     const optionsHolder = document.createElement('div'); //holds the answers' options
     optionsHolder.classList.add('options');
     quizSection.appendChild(optionsHolder);
-    // console.log("question area is here", quizSection)
 
     const repeatBtn = document.createElement('button');  //incase the user fails
     repeatBtn.classList.add('repeat');
@@ -70,9 +91,26 @@ function showQuiz (sectionClass, questions) {
 
     section.appendChild(quizSection);
 
-    const chooseQuiz = Math.floor(Math.random() * questions.length); //user randomly receives a quiz
-    const quizInfo = questions[chooseQuiz];
+     //user receives a quiz
+    const quizInfo = questions[presentQuizposition];
     testOfQuiz.textContent = quizInfo.quiz;
+
+     //checking if the quiz is over  
+     if (presentQuizposition === allQuestions -1){
+        repeatBtn.textContent = "You made it, bye!"
+        repeatBtn.addEventListener('click', () => {
+            quizSection.remove();
+            const validate = document.querySelector('.quiz-card .list-of-quizzes');
+            validate.disabled = true;
+            validate.style.opacity = '0.8';
+        });
+    } else {
+        repeatBtn.textContent = 'Next';
+        repeatBtn.addEventListener('click', () =>{
+            quizSection.remove();
+            presentQuizposition++;
+        }); 
+    }
 
     quizInfo.answers.forEach(answers => {  //allow choices on the questions
         const ansOption = document.createElement('button');
@@ -103,9 +141,6 @@ function showQuiz (sectionClass, questions) {
             repeatBtn.style.display = 'block';
         });
         optionsHolder.appendChild(ansOption);
-    })
-    repeatBtn.addEventListener('click', () => {
-        quizSection.remove();
     });
 }
 

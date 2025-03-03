@@ -93,7 +93,7 @@ main {
     border-radius: 10px;
 }
 .description {
-    max-width: 70%;
+    /* max-width: 70%; */
     padding: 10px;
     margin: 10px;
     font-size: 40px;
@@ -110,18 +110,8 @@ main {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
     0, 0, 8px rgba(255, 255, 255, 0.5);
 }
-.info-btn {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    padding: 20px;
-    font-size: 22px;
-    border: none;
-    cursor: pointer;
-    transition: 
-    background-color 0.5s ease-in,
-    transform 0.3s ease-out;
-}
-.info-btn:hover, .earn-points .list-of-quizzes:hover {
+
+.earn-points .list-of-quizzes:hover, .watch-links:hover {
     transform: scale(0.8);
     background-color: olivedrab;
 }
@@ -160,15 +150,15 @@ h3 {
     padding: 0.2rem;
     color: #0b6623;
 }
-.earn-points .list-of-quizzes {
-    font-size: 1.5rem;
+.earn-points .list-of-quizzes, .watch-links {
+    font-size: 1.2rem;
     background: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: 
     background-color 0.4s ease-in,
     transform 0.4s ease-out;
-    padding: 1rem;
-    border-radius: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
 }
 
 /* footer area */
