@@ -121,7 +121,7 @@ main {
     background-color 0.5s ease-in,
     transform 0.3s ease-out;
 }
-.info-btn:hover, .earn-points button:hover {
+.info-btn:hover, .earn-points .list-of-quizzes:hover {
     transform: scale(0.8);
     background-color: olivedrab;
 }
@@ -160,7 +160,7 @@ h3 {
     padding: 0.2rem;
     color: #0b6623;
 }
-.earn-points button {
+.earn-points .list-of-quizzes {
     font-size: 1.5rem;
     background: rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -177,6 +177,29 @@ footer {
     text-align: center;
     padding-top: 2rem;
 }
+
+/* styling the pop-up quiz */
+.thisIsanOption {
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 
+    background-color 0.4s ease-in,
+    transform 0.4s ease-out;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.repeat {
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 
+    background-color 0.4s ease-in,
+    transform 0.4s ease-out;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
 
 /* media queries */
 
