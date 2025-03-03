@@ -20,7 +20,7 @@ Click the buttons and earn points.
 
     #Responsiveness
 After clicking the quiz button, pawTect presents a quiz that populates the 
-quiz area. There it set its media queries at the following points: 
+quiz area. There it set its media queries at the following points: max-width: 1280px and max-width:1190 
 
 
     #Future developments
