@@ -52,7 +52,6 @@ function startTest() {
     })
     //dealing with the nav bar click on leaderboard
     const leaderBoard = document.querySelector('.nav-one');
-    console.log('leader:', leaderBoard)
     leaderBoard.addEventListener('click', () => {
         alert('Join a crypto community to become a pawTected member!');
     });
