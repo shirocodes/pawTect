@@ -60,7 +60,8 @@ function startTest() {
 
      //Deal with the main section's user activity
 //create element to show the quiz
-function showQuiz (sectionClass, questions) {
+function showQuiz (sectionClass, tests) {
+    // console.log('showQuiz has my quiz:',tests);
     const section = document.querySelector(sectionClass);
     const showOutput = section.querySelector('#QP-points');
     let presentScore = parseInt(showOutput.textContent) || 0;
@@ -82,26 +83,27 @@ function showQuiz (sectionClass, questions) {
     optionsHolder.classList.add('options');
     quizSection.appendChild(optionsHolder);
 
-    const repeatBtn = document.createElement('button');  //incase the user fails
+    const repeatBtn = document.createElement('button');  //what comes after the user clicks an option
     repeatBtn.classList.add('repeat');
-    repeatBtn.textContent = 'Next';
+
+    // repeatBtn.textContent = 'Next';
     repeatBtn.style.display = 'none';
     quizSection.appendChild(repeatBtn);
 
     section.appendChild(quizSection);
 
      //user receives a quiz
-    const quizInfo = questions[presentQuizposition];
+    const quizInfo = tests[presentQuizposition];
     testOfQuiz.textContent = quizInfo.quiz;
 
-     //checking if the quiz is over  
+     //checking if the a quiz is over.
      if (presentQuizposition === allQuestions -1){
-        repeatBtn.textContent = "You made it, bye!"
+
+        // repeatBtn.textContent = "You made it, bye!"
         repeatBtn.addEventListener('click', () => {
+             repeatBtn.textContent = "You made it, bye!"
             quizSection.remove();
-            const validate = document.querySelector('.quiz-card .list-of-quizzes');
-            validate.disabled = true;
-            validate.style.opacity = '0.8';
+            // const validate = document.querySelector('.quiz-card .list-of-quizzes');
         });
     } else {
         repeatBtn.textContent = 'Next';
