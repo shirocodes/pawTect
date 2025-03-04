@@ -88,7 +88,7 @@ main {
     display: flex;
     align-items: center;
     justify-content:space-around;
-    background-image: url(/assets/images/paw-background);
+    background-image: url(../assets/images/paw-background);
     background-position:bottom;
     border-radius: 0.6rem;
 }
